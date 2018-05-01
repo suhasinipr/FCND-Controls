@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 """
 Starter code for the controls project.
 This is the solution of the backyard flyer script, 
@@ -56,6 +56,9 @@ class ControlsFlyer(UnityDrone):
                  self.yaw_trajectory,
                  self.time_trajectory, time.time())
         self.attitude_target = np.array((0.0, 0.0, yaw_cmd))
+        #Testing only
+        # self.local_position_target = np.array([0.0 ,0.0 ,-3.0])
+        # self.local_velocity_target = np.array([0.0, 0.0, 0.0])
         acceleration_cmd = self.controller.lateral_position_control(
                 self.local_position_target[0:2],
                 self.local_velocity_target[0:2],
